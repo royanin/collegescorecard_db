@@ -1,3 +1,4 @@
+from instances import ENV_VAR
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
