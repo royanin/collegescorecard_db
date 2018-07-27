@@ -1,4 +1,17 @@
-#### Create databases for CollegeScoreCard.io
+# Create databases for CollegeScoreCard.io
+
+This codebase is used to create the two databases that power [CollegeScoreCard.io](https://collegescorecard.io/). One of the databases stores app-generated data (such as messages from the website visitors), while the other stores static data (such as the information on colleges). Please visit the website/repo for more details. The codebase for the website is available [here](https://github.com/royanin/collegescorecard).
+
+### References
+
+0. [CollegeScoreCard.io codebase](https://github.com/royanin/collegescorecard)
+1. [Dash user guide](https://dash.plot.ly/)
+2. [Dash/Plotly community forum](https://community.plot.ly/)
+3. [Flask -- a Python-based web framework](http://flask.pocoo.org/)
+4. [The Flask Mega-Tutorial by Miguel Grinberg](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+5. [Official CollegeScoreCard dataset](https://collegescorecard.ed.gov/data/)
+
+### Details
 
 1. These scripts should work with sqlite and mysql (not tested with postgre, for example).
 For trying it out the first time, start with sqlite (uncomment the sqlite-scpecific lines in 
