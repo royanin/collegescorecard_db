@@ -26,7 +26,8 @@ def load_files():
     #Done loading nat_avg    
 
     #load school_details
-    sch_details_df1 = pd.read_csv('data/set_234.csv', dtype={'OPEID': np.string_ ,
+    sch_details_df1 = pd.read_csv('data/set_234.csv', dtype={'UNITID': np.string_ ,
+                            'OPEID': np.string_ ,
                             'OPEID6': np.string_ ,
                             'ZIP5': np.string_ },
                                 )
@@ -42,7 +43,8 @@ def load_files():
     case with sqlalchemy raising IntegrityError for duplicate entry.
     """
     wiki_social_df = pd.read_csv('data/wiki_social.csv', quotechar = '"',
-                                 dtype={'wiki_summary':np.unicode_},
+                                 dtype={'wiki_summary':np.unicode_,
+                                       'UNITID': np.string_ },
                                  na_values='NULL',
                                  keep_default_na=False
                               )
@@ -64,6 +66,6 @@ def load_files():
 
 if __name__ == '__main__':
     db.create_all()
-    load_emails()
+    #load_emails()
     load_files()
                        

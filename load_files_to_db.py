@@ -31,6 +31,7 @@ def load_nat_avg(row):
 def load_summary(row):
     summary = Wiki_summary(uid=row['uid'],
                             inst_nm = row['INSTNM'],
+                            UNITID = row['UNITID'],
                             OPEID = row['OPEID'],                           
                             wiki_summary = row['wiki_summary'].decode('utf8'),
                             date_extracted = row['time_extracted'][:10],
@@ -55,7 +56,8 @@ def load_zip_lat_long(row):
 
 def load_school_details(row):
 
-    school_detail = School_details(uid=row['uid'],                        
+    school_detail = School_details(uid=row['uid'],  
+                                UNITID = row['UNITID'],                                   
                                 OPEID = row['OPEID'],
                                 OPEID6 = row['OPEID6'],
                                 INSTNM = row['INSTNM'],
@@ -82,6 +84,20 @@ def load_school_details(row):
                                 ACTMTMID = row['ACTMTMID'],
                                 ACTWRMID = row['ACTWRMID'],
                                 POP_SUBS = row['POP_SUBS'],
+                                SATVR25 = row['SATVR25'], 
+                                SATVR75 = row['SATVR75'],
+                                SATMT25 = row['SATMT25'],
+                                SATMT75 = row['SATMT75'],
+                                SATWR25 = row['SATWR25'],
+                                SATWR75 = row['SATWR75'],
+                                ACTCM25 = row['ACTCM25'],
+                                ACTCM75 = row['ACTCM75'],
+                                ACTEN25 = row['ACTEN25'],
+                                ACTEN75 = row['ACTEN75'],
+                                ACTMT25 = row['ACTMT25'],
+                                ACTMT75 = row['ACTMT75'],
+                                ACTWR25 = row['ACTWR25'],
+                                ACTWR75 = row['ACTWR75'],                                
                                 UGDS = row['UGDS'],
                                 TUITIONFEE_IN = row['TUITIONFEE_IN'],
                                 TUITIONFEE_OUT = row['TUITIONFEE_OUT'],
@@ -131,7 +147,10 @@ def load_school_details(row):
                                 rankp_ADJ_AVGFACSAL = row['rankp_ADJ_AVGFACSAL'],
                                 rankp_ADJ_INEXPFTE = row['rankp_ADJ_INEXPFTE'],
                                 rankp_PFTFAC = row['rankp_PFTFAC'],
-                                rankp_COMB_RET_RATE = row['rankp_COMB_RET_RATE']
+                                rankp_COMB_RET_RATE = row['rankp_COMB_RET_RATE'],
+                                adm_pct = row['adm_pct'],
+                                IF_SAT_PRESENT = row['IF_SAT_PRESENT'],
+                                IF_ACT_PRESENT = row['IF_ACT_PRESENT']                                
     
     )
     
